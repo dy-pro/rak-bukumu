@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rak Bukumu - A Book Shelf App</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper glass-bg">
+      <header>
+        <div class="logo-container">
+          <h1>Rak Bukumu</h1>
+        </div>
+
+        <div class="devider-v"></div>
+        <div id="snackbar"></div>
+
+        <div class="nav-container">
+          <h2>Hi, there!</h2>
+          <div class="search-container">
+            <form action="" id="searchBook">
+              <input
+                type="search"
+                id="searchBookTitle"
+                placeholder="Cari judul buku"
+              />
+              <button type="submit" id="searchSubmit">Cari</button>
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <div class="devider-h"></div>
+
+      <main>
+        <aside>
+          <h2>Tambah buku:</h2>
+          <form action="" id="inputBook">
+            <div class="form-group">
+              <label for="inputBookTitle"
+                ><i class="fa-solid fa-book"></i>Judul buku</label
+              >
+              <input type="text" id="inputBookTitle" required />
+            </div>
+
+            <div class="form-group">
+              <label for="inputBookAuthor"
+                ><i class="fa-solid fa-user"></i>Nama penulis</label
+              >
+              <input type="text" id="inputBookAuthor" required />
+            </div>
+
+            <div class="form-group">
+              <label for="inputBookYear"
+                ><i class="fa-solid fa-calendar"></i>Tahun</label
+              >
+              <input type="number" id="inputBookYear" required />
+            </div>
+
+            <div class="form-inline-group">
+              <input type="checkbox" id="inputBookIsRead" />
+              <label for="inputBookIsRead">Selesai dibaca</label>
+            </div>
+
+            <button type="submit" id="bookSubmit">
+              <i class="fa fa-plus"></i>Tambah buku ke rak
+            </button>
+          </form>
+        </aside>
+
+        <div class="devider-v"></div>
+
+        <div class="content">
+          <section id="belum-dibaca">
+            <div>
+              <h2>Belum selesai dibaca</h2>
+              <div id="incompletBookshelfList" class="book-list glass"></div>
+            </div>
+          </section>
+
+          <section id="sudah-dibaca">
+            <div>
+              <h2>Sudah dibaca</h2>
+              <div id="completeBookshelfList" class="book-list glass"></div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        <p>Copyright © 2023 Ardyan Satya.</p>
+        <p>Ver-1.0.0</p>
+      </footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

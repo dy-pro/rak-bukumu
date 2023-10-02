@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gabarito", cursive;
+  color: #464646;
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 95vh;
+  padding-inline: 2rem;
+  padding-block-start: 2rem;
+  padding-block-end: 1rem;
+  border-radius: 2rem;
+}
+
+header {
+  flex: 1;
+  display: flex;
+  margin-block-end: 1.5rem;
+}
+
+main {
+  flex: 2;
+  display: flex;
+  margin-block-start: 1.5rem;
+  margin-block-end: 1rem;
+}
+
+footer {
+  flex: 1;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .logo-container {
+  flex: 25%;
+}
+
+header .nav-container {
+  flex: 75%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline-start: 2.5rem;
+}
+
+.content {
+  flex: 75%;
+  display: flex;
+  padding-inline-start: 2.5rem;
+}
+
+aside {
+  flex: 25%;
+  padding-inline-end: 2.5rem;
+}
+
+#belum-dibaca {
+  flex: 45%;
+  padding-right: 1.25rem;
+}
+
+#sudah-dibaca {
+  flex: 30%;
+  padding-left: 1.25rem;
+}
+
+.book-list {
+  padding: 2rem;
+  border-radius: 25px;
+  height: 23rem;
+  overflow: auto;
+}
+
+.book-item {
+  display: flex;
+  border-radius: 25px;
+  padding: 1.5rem;
+  margin-block-end: 1rem;
+}
+
+.book-detail {
+  flex: 2;
+}
+
+.action {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.btn-action {
+  font-family: "Gabarito", cursive;
+  padding: 0.5rem 1rem;
+  border: solid 1px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.green {
+  color: green;
+  border-color: green;
+}
+
+.red {
+  border: none;
+  color: red;
+}
+
+.yellow {
+  color: orange;
+}
+
+h3 {
+  margin: 0;
+}
+
+h3 ~ p {
+  margin-block: 0.2rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.glass-bg {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(0.5rem);
+  border: solid 1px white;
+}
+
+.glass {
+  background: transparent;
+  border: solid 1px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 0.5rem 0.2rem rgba(255, 255, 255, 0.5),
+    inset 0 0 0.5rem grey;
+}
+
+.form-group {
+  margin-block: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.search-container input {
+  padding: 0.5rem;
+  border-radius: 7px;
+  border: solid 1px rgba(255, 255, 255, 0.8);
+  background-color: transparent;
+  box-shadow: inset 0 0 5px grey;
+}
+
+.search-container button {
+  font-family: "Gabarito", cursive;
+  padding: 0.5rem;
+  border-radius: 7px;
+  border: solid 1px white;
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0.509)
+  );
+}
+
+.search-container button:hover,
+#bookSubmit,
+.btn-action {
+  cursor: pointer;
+}
+
+.form-group input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 7px;
+  border: solid 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 5px grey;
+  background-color: transparent;
+}
+
+.form-inline-group {
+  margin-block: 1rem;
+}
+
+.form-inline-group label,
+input {
+  display: inline;
+}
+
+#bookSubmit {
+  font-family: "Gabarito", cursive;
+  display: block;
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+  border: solid 1px white;
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0.509)
+  );
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  margin-block: 1.5rem;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0.509)
+  );
+  border-radius: 10px;
+}
+
+.devider-h {
+  height: 0.4rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 3px grey;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+.devider-v {
+  width: 0.4rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 3px grey;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+i {
+  margin-inline: 0.5rem;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 15.6rem;
+  margin-left: -125px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(0.5rem);
+  border: solid 1px white;
+  text-align: center;
+  border-radius: 0.8rem;
+  padding-inline: 3.5rem;
+  padding-block: 0.2rem;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+.green-notif {
+  color: green;
+}
+
+.red-notif {
+  color: red;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .wrapper {
+    overflow: auto;
+  }
+
+  aside {
+    padding-inline-end: 2rem;
+  }
+
+  .content {
+    flex-direction: column;
+    padding-inline-start: 2rem;
+  }
+
+  #belum-dibaca,
+  #sudah-dibaca {
+    padding-inline: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    overflow: auto;
+  }
+
+  aside {
+    padding-inline-end: 2rem;
+  }
+
+  .content {
+    flex-direction: column;
+    padding-inline: 2rem;
+  }
+
+  #belum-dibaca,
+  #sudah-dibaca {
+    padding-inline: 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  * {
+    font-size: 14px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 0px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  aside,
+  #belum-dibaca,
+  #sudah-dibaca {
+    padding-inline: 0px;
+  }
+
+  .content {
+    flex-direction: column;
+    padding-inline: 0px;
+  }
+
+  .book-list {
+    padding-inline: 1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  aside,
+  #belum-dibaca,
+  #sudah-dibaca {
+    padding-inline: 0px;
+  }
+
+  .content {
+    flex-direction: column;
+    padding-inline: 0px;
+  }
+}
